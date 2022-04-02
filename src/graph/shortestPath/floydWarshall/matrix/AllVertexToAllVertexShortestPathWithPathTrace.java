@@ -1,4 +1,4 @@
-package graph.shortestPath.floydMarshall.matrix;
+package graph.shortestPath.floydWarshall.matrix;
 
 import graph.AdjacencyMatrix;
 
@@ -116,6 +116,6 @@ public class AllVertexToAllVertexShortestPathWithPathTrace extends AdjacencyMatr
         }
 
         public static void main(String args []) {
-            new graph.shortestPath.floydMarshall.matrix.AllVertexToAllVertexShortestPathWithPathTrace().work();
+            new AllVertexToAllVertexShortestPathWithPathTrace().work();
         }
 }

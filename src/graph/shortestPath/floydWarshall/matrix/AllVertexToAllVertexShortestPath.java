@@ -1,4 +1,4 @@
-package graph.shortestPath.floydMarshall.matrix;
+package graph.shortestPath.floydWarshall.matrix;
 
 import graph.AdjacencyMatrix;
 
