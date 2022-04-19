@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/*
+    INCORRECT IMPLEMENTATION. CORRECTION NEEDED
+ */
 public class TopologicalSort extends AdjacencyList {
     int [] res;
     int resPt;
@@ -43,28 +46,19 @@ public class TopologicalSort extends AdjacencyList {
     public void work() {
         adjList = new ArrayList<>();
 
+        // vertex 0
+        List<int[]> neighbour0 = new ArrayList<>();
+        neighbour0.add(new int [] {2,-1});
+        adjList.add(neighbour0);
+
+        // vertex 1
         List<int[]> neighbour1 = new ArrayList<>();
-        neighbour1.add(new int [] {1,-1});
+        neighbour1.add(new int [] {0,-1});
         adjList.add(neighbour1);
 
+        // vertex 2
         List<int[]> neighbour2 = new ArrayList<>();
-        neighbour2.add(new int [] {2,-1});
-        neighbour2.add(new int [] {4,-1});
         adjList.add(neighbour2);
-
-        List<int[]> neighbour3 = new ArrayList<>();
-        neighbour3.add(new int [] {3,-1});
-        adjList.add(neighbour3);
-
-        List<int[]> neighbour4 = new ArrayList<>();
-        adjList.add(neighbour4);
-
-        List<int[]> neighbour5 = new ArrayList<>();
-        neighbour5.add(new int [] {5,-1});
-        adjList.add(neighbour5);
-
-        List<int[]> neighbour6 = new ArrayList<>();
-        adjList.add(neighbour6);
 
         sort();
     }
