@@ -7,6 +7,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/*
+    PSEUDO CODE:
+    
+    1. For each node that is not safe (not yet checked for cyclicity) node:
+        1.1. Mark it as unsafe
+        1.2. If the node has already been marked unsafe, cycle has been detected! Go to step 3
+        1.3. For each neighbour of the node, go to step 1
+        1.4. If no cycle detected after exhaustion of all the neighbours, mark the node as safe
+    2. Repeat step 1 until all the nodes have been marked as safe
+    3. Display result
+*/
 public class CycleDetectionInDirectedGraph extends AdjacencyList {
     boolean cyclic;
     Set<Integer> safeNodes;
