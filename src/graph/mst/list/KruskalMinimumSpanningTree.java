@@ -5,6 +5,16 @@ import graph.AdjacencyList;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/*
+    PSEUDO CODE:
+    
+    1. Sort all the edges by their weights and put them in a priority queue
+    2. For each top edge in the priority queue
+        2.1. Find the parents of both the nodes of the edge
+        2.2. If their parents are not equal then put this edge in the result nad perform union operation on both the nodes
+    3. Run step 2 until all the edges required for a MST are generated
+    4. Dsiplay result
+*/
 public class KruskalMinimumSpanningTree extends AdjacencyList {
 
     static class UnionFindNode {
