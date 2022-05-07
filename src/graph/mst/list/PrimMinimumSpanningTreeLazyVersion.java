@@ -4,6 +4,20 @@ import graph.AdjacencyList;
 
 import java.util.*;
 
+/*
+    PSEUDO CODE:
+    
+    1. Initialize a Priority Queue that sorts the edges od the graph based on its weight
+    2. Pick any source node and mark it as visited
+    3. Put all the edges of the source node in the priority queue
+    4. For each top node in the priority queue
+        4.1. Poll the node
+        4.2. Mark the destination node as visited
+        4.3. For each neighbour of the destination node
+            4.4. If its neighbour is unvisited, put that edge in the priority queue
+    5. Repeat step 4 until you get all the minimum edges required to generate the MST
+    6. Display MST
+*/
 public class PrimMinimumSpanningTreeLazyVersion extends AdjacencyList {
     Queue<int[]> pq;
     int [][] mstEdges;
