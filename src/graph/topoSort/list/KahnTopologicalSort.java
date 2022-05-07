@@ -7,6 +7,17 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/*
+    PSEUDO CODE:
+    
+    1. Calculate Indegree of each node
+    2. Put each node with an Indegree of 0 in a queue
+    3. Poll the first node in the stack
+        3.1. Reduce each of it's neighbour's Indegree by 1
+            3.1.1. If the neighbour's Indegree is 0, add it to the queue
+    4. If queue is not empty, go to step 3
+    5. Display result
+*/
 public class KahnTopologicalSort extends AdjacencyList {
     int [] res;
     int resPt;
