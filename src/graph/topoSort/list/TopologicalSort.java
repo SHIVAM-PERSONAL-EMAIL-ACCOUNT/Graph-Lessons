@@ -9,7 +9,16 @@ import java.util.List;
 
 /*
     INCORRECT IMPLEMENTATION. CORRECTION NEEDED
- */
+
+    PSEUDO-CODE:
+    
+    1. Mark each node as unvisited
+    2. For each unvisited node:
+        2.1. Traverse all its unvisited neighbours
+        2.2. After exploring all its neighbours, mark the node as visited and push it into a stack
+    3. Put Stack into the resultSet and re-start step 2 with a new stack
+    4. Display resultSet
+*/
 public class TopologicalSort extends AdjacencyList {
     int [] res;
     int resPt;
