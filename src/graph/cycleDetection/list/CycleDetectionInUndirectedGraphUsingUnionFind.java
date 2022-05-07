@@ -5,6 +5,16 @@ import graph.AdjacencyList;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+    PSEUDO CODE:
+    
+    1. For each edge in the graph
+        1.1. Get parents of both the vertices of the edge
+        1.2. If the parent are same, cycle has been detected! Go to step 3
+        1.3. Mark parents of both the vertices as same
+    2. Repeat step 1 until all the edges have been exhausted
+    3. Display result
+*/
 public class CycleDetectionInUndirectedGraphUsingUnionFind extends AdjacencyList {
     boolean cyclic;
     int [] setArr;
